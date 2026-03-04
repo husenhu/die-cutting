@@ -1,16 +1,63 @@
-# Run and deploy your AI Studio app
+# Die Cutting Label Automation System
 
-This contains everything you need to run your app locally.
+Sistem otomasi tata letak (layouting) presisi tinggi untuk industri pemotongan label (die-cutting), dirancang khusus untuk kebutuhan label IMEI, box elektronik, dan produksi massal lainnya.
 
-View your app in AI Studio: https://ai.studio/apps/4284f690-9710-451e-9714-450fdd05500b
+## 🚀 Fitur Utama
 
-## Run Locally
+- **Kontrol Presisi Industri**: Input angka akurat dalam satuan mm/cm untuk menjamin kesesuaian produk (Millimeter-Perfect).
+- **Fleksibilitas Ukuran (Custom Dimension)**: 
+    - Tanpa batas template kertas standar.
+    - Pengaturan *Gap Management* (jarak antar label) untuk akomodasi pisau potong/sensor printer.
+- **Logika Lembaran & Perforasi**: 
+    - Deteksi otomatis batas halaman.
+    - Penambahan garis sobek (perforasi) otomatis di setiap akhir lembaran.
+- **Produksi Massal**: Kalkulasi otomatis jumlah label per halaman dan total halaman berdasarkan target produksi.
+- **Output Vektor (jsPDF)**: Menghasilkan PDF vektor yang tidak pecah saat diperbesar, siap untuk mesin potong digital atau printer thermal industri.
+- **Visualisasi Real-Time**: *Live preview* untuk meminimalisir kesalahan setting dan limbah bahan.
 
-**Prerequisites:**  Node.js
+## 🛠️ Teknologi yang Digunakan
 
+- **Frontend**: ReactJS (Vite)
+- **Styling**: Tailwind CSS
+- **PDF Generation**: [jsPDF](https://github.com/parallax/jsPDF)
+- **Icons**: Lucide React
+- **Animations**: Motion (Framer Motion)
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## 📋 Prasyarat
+
+Sebelum memulai, pastikan Anda telah menginstal:
+- [Node.js](https://nodejs.org/) (Versi terbaru direkomendasikan)
+- NPM atau Yarn
+
+## ⚙️ Instalasi dan Pengaturan
+
+1. **Clone repositori ini:**
+   ```bash
+   git clone [url-repositori]
+   cd cutting-label
+   ```
+
+2. **Instal dependensi:**
+   ```bash
+   npm install
+   ```
+
+3. **Siapkan variabel lingkungan:**
+   Salin `.env.example` menjadi `.env` (jika diperlukan konfigurasi tambahan).
+   ```bash
+   cp .env.example .env
+   ```
+
+4. **Jalankan aplikasi dalam mode pengembangan:**
+   ```bash
+   npm run dev
+   ```
+   Aplikasi akan berjalan di `http://localhost:3000`.
+
+## 🏗️ Build untuk Produksi
+
+Untuk menghasilkan build produksi yang dioptimalkan:
+```bash
+npm run build
+```
+Hasil build akan berada di direktori `dist/`.
