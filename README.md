@@ -14,6 +14,7 @@ Sistem otomasi tata letak (layouting) presisi tinggi untuk industri pemotongan l
 - **Produksi Massal**: Kalkulasi otomatis jumlah label per halaman dan total halaman berdasarkan target produksi.
 - **Output Vektor (jsPDF)**: Menghasilkan PDF vektor yang tidak pecah saat diperbesar, siap untuk mesin potong digital atau printer thermal industri.
 - **Visualisasi Real-Time**: *Live preview* untuk meminimalisir kesalahan setting dan limbah bahan.
+- **Dual Language Support**: Dukungan multibahasa (Bahasa Indonesia & English) dengan pengatur bahasa instan di antarmuka.
 
 ## 🛠️ Teknologi yang Digunakan
 
@@ -61,3 +62,11 @@ Untuk menghasilkan build produksi yang dioptimalkan:
 npm run build
 ```
 Hasil build akan berada di direktori `dist/`.
+
+## 📝 Update Log
+
+### [2026-03-04] - Multi-Language Support & Documentation
+- **Feature**: Implementasi dukungan dua bahasa (Indonesia & Inggris).
+- **UI**: Penambahan tombol ganti bahasa (flag-only) di navbar.
+- **Docs**: Pembaruan README.md dengan detail proyek dan panduan instalasi serta update log.
+- **i18n**: Refaktorisasi teks hardcoded ke dalam sistem translasi `translations.ts`.
